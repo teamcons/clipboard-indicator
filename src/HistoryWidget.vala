@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-public class Clipboard.HistoryWidget : Gtk.Box {
+public class Clipboard.HistoryWidget : Gtk.Grid {
     private Gee.HashSet<string> clipboard_text_set;
     private Gtk.ListBox clipboard_item_list;
     private string last_text = "";
