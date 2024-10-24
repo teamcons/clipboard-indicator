@@ -14,8 +14,14 @@ public class Clipboard.HistoryWidget : Gtk.Box {
     construct {
         clipboard_text_set = new Gee.HashSet<string> ();
 
-        clipboard_item_list = new Gtk.ListBox () {
+        clipboard_item_list = new Granite.Widgets.ModeButton () {
             selection_mode = SINGLE
+
+            /* STELLA */
+            expand = true;
+            orientation = Gtk.Orientation.VERTICAL;
+
+
         };
         clipboard_item_list.set_placeholder (new Gtk.Label (_("Clipboard Empty")));
         var scroll_box = new Gtk.ScrolledWindow (null, null);
